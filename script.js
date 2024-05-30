@@ -58,7 +58,10 @@ main.querySelector("#start").addEventListener("click", function() { //start butt
         if (!choosenL[i]) continue;
         for(let j = 0;j < words[i].length;j++) curwords.push(words[i][j]);
     }
-    if (curwords.length < 4) return;
+    if (curwords.length < 4) {
+        window.alert("請至少選擇一課")
+        return;
+    }
     newWords();
     mainHTML = main.innerHTML
     main.remove();
