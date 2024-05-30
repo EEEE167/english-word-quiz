@@ -1,3 +1,3 @@
-# a website
+# website
 
 **a cool website**
