@@ -5,8 +5,8 @@ lessons = [
     "Review 3"
 ]
 
-words = {
-    "7": [
+words = [
+    [
         ["seek", "尋找"],
         ["series", "系列"],
         ["foundation", "基金會"],
@@ -38,5 +38,37 @@ words = {
         ["discuss", "討論"],
         ["discussion", "討論"],
         ["method", "方法"]
-    ]
-};
+    ],
+    [
+        ["exchange", "交換"],
+        ["expect", "預期"],
+        ["expectation", "期望"],
+        ["shelter", "庇護處"],
+        ["fierce", "激烈的"],
+        ["occupy", "佔據"],
+        ["occupation", "職業"],
+        ["vehicle", "交通工具"],
+        ["temporary", "暫時的"],
+        ["assistant", "助理"],
+        ["assist", "幫助"],
+        ["originate", "起源於"],
+        ["origin", "起源"],
+        ["original", "原本的"],
+        ["event", "事件"],
+        ["elder", "長輩"],
+        ["elderly", "年紀大的"],
+        ["neighborhood", "鄰近地區"],
+        ["cooperation", "合作"],
+        ["cooperate", "合作"],
+        ["arrange", "安排"],
+        ["arrangement", "安排"],
+        ["relax", "放鬆"],
+        ["container", "容器"],
+        ["contain", "包含"],
+        ["stroll", "散步"],
+        ["spirit", "靈魂"],
+        ["spirital", "精神上的"]
+    ],
+    [],
+    []
+];
