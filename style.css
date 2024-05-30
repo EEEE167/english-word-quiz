@@ -1,0 +1,118 @@
+body {
+    text-align: center;
+    background-color: black;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+.l {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 32px 32px;
+    border: 4px solid white;
+    border-radius: 10px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.l:before {
+    content: "✔";
+    opacity: 0;
+    position: relative;
+    transition: 0.4s;
+    left: -20px;
+}
+
+.l:hover:before {
+    opacity: 1;
+    left: -20px;
+}
+
+#start {
+    background-color: white;
+    margin: 4px 4px;
+    padding: 40px 40px;
+    font-size: 50px;
+    border-radius: 100px;
+    border: 4px solid yellow;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#start:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.op {
+    border-radius: 15px;
+    color: black;
+    padding: 16px 32px;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    margin: 4px 4px;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+#content {
+    font-size: 16px;
+    color: white;
+    margin: 16px 32px;
+    padding: 16px 32px;
+    border: 4px solid white;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+#content:hover {
+    background-color: white;
+    color: black;
+}
+
+#optionA {
+    background-color: white;
+    border: 2px solid red;
+}
+#optionA:hover {
+    background-color: red;
+    color: white;
+}
+
+#optionB {
+    background-color: white;
+    border: 2px solid seagreen;
+}
+#optionB:hover {
+    background-color: seagreen;
+    color: white;
+}
+
+#optionC {
+    background-color: white;
+    border: 2px solid blue;
+}
+#optionC:hover {
+    background-color: blue;
+    color: white;
+}
+
+#optionD {
+    background-color: white;
+    border: 2px solid rgb(95, 0, 142);
+}
+#optionD:hover {
+    background-color: rgb(95, 0, 142);
+    color: white;
+}
