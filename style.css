@@ -58,7 +58,7 @@ body {
 }
 
 .op {
-    border:2px solid green;
+    border:2px solid rgb(17, 172, 17);
     border-radius: 15px;
     background-color: white;
     color: black;
@@ -97,4 +97,28 @@ body {
 #content:hover {
     background-color: white;
     color: black;
+}
+
+#exit {
+    padding: 10px 32px;
+    font-size: 16px;
+    position: absolute;
+    left: 0px;
+    transition: 0.4s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#exit:before {
+    position: absolute;
+    color: black;
+    content: "«";
+    opacity: 0;
+    transition: 0.4s;
+    left: 25px;
+}
+
+#exit:hover:before {
+    opacity: 1;
+    left: 15px;
 }

@@ -8,7 +8,7 @@ for (let i = 0;i < lessons.length;i++) {
     choosenL.push(false);
 }
 
-for(let i = 0;i < lessons.length;i++) {
+for(let i = 0;i < lessons.length;i++) { // lessons button
     les.innerHTML += "<button class = \"l notchoosen\" id = \"" + i.toString() + "\" >" + lessons[i] + "</button><br><br>";
 }
 for(let i = 0;i < lessons.length;i++) {
@@ -44,7 +44,7 @@ function newWords() {
     }
 }
 
-function choose(op) {
+function choose(op) { //option
     if (curwords[op][0] == curwords[rand[rand[4]]][0]) {
         correct++;
     } else wrong++;
@@ -58,12 +58,17 @@ main.querySelector("#start").addEventListener("click", function() { //start butt
         if (!choosenL[i]) continue;
         for(let j = 0;j < words[i].length;j++) curwords.push(words[i][j]);
     }
+    if (curwords.length < 4) return;
     newWords();
-    doc.getElementById("main").remove();
-    doc.getElementById("sub").classList.remove("hidden")
-    doc.getElementById("sub").classList.add("visible")
+    mainHTML = main.innerHTML
+    main.remove();
+    sub.classList.remove("hidden")
+    sub.classList.add("visible")
 });
 
-for(let i = 0;i < 4;i++) {
+//exit button
+sub.querySelector("#exit").addEventListener("click", function() {location.reload();});
+
+for(let i = 0;i < 4;i++) { //option button
     doc.getElementById("option" + String.fromCharCode(65+i)).addEventListener("click", function() {choose(rand[i])})
 }
