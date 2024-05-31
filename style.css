@@ -3,8 +3,26 @@ body {
     background-color: black;
 }
 
+.book {
+    color: aliceblue;
+    background-color: rgb(20, 20, 20);
+    border: 4px solid aliceblue;
+    transition: 0.4s;
+    width: 128px;
+    border-radius: 20px;
+    position: relative;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.book:hover {
+    top: -5px;
+}
+
 #sub {
-    background-color: black;
+    background-color: rgb(15, 15, 15);
     text-align: center;
     border: 4px solid white;
     width: 50%;
@@ -16,7 +34,7 @@ body {
 
 .l {
     display: inline-block;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     color: white;
     padding: 32px 32px;
     border: 4px solid white;
@@ -68,7 +86,8 @@ body {
     border-radius: 15px;
     background-color: white;
     color: black;
-    padding: 24px 48px;
+    width: 200px;
+    padding: 24px;
     font-size: 20px;
     transition-duration: 0.4s;
     margin: 16px 4px;
@@ -77,8 +96,8 @@ body {
 }
 
 .op:hover {
-    background-color: green;
     color: white;
+    background-color: green;
 }
 
 .hidden {
@@ -128,4 +147,39 @@ body {
 #exit:hover:before {
     opacity: 1;
     left: 15px;
+}
+
+.working {
+    background-color: rgb(25, 25, 25);
+    border: 4px solid white;
+    padding: 16px 32px;
+    border-radius: 10px;
+    width: 200px;
+    transition: 0.4s;
+    color: white;
+    margin: 10px;
+}
+
+.working span {
+    position: relative;
+    transition: 0.4s;
+}
+
+.working:hover span {
+    transition: 0.4s;
+    padding-left: 20px;
+}
+
+.working span:before {
+    content: "Ɛ=";
+    position: relative;
+    transition: 0.5s;
+    opacity: 0;
+    left: 10px;
+}
+
+.working:hover span:before {
+    left: -10px;
+    transition: 0.5s;
+    opacity: 1;
 }
