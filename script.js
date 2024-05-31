@@ -2,6 +2,7 @@ const doc = document;
 const main = doc.getElementById("main");
 const sub = doc.getElementById("sub");
 const les = doc.getElementById("lessons");
+const exit = doc.getElementById("exit");
 curwords = [], choosenL = [], correct = 0, wrong = 0;
 
 for (let i = 0;i < lessons.length;i++) {
@@ -40,7 +41,7 @@ function newWords() {
     rand = random(curwords.length-1);
     doc.getElementById("content").innerHTML = curwords[rand[rand[4]]][0];
     for(let i = 0;i < 4;i++) {
-        doc.getElementById("option" + String.fromCharCode(65+i)).innerHTML = curwords[rand[i]][1];
+        doc.getElementById("option" + String.fromCharCode(65+i)).innerHTML = "<strong>" + curwords[rand[i]][1] + "</strong>";
     }
 }
 
@@ -62,16 +63,17 @@ main.querySelector("#start").addEventListener("click", function() { //start butt
         window.alert("請至少選擇一課")
         return;
     }
+    sub.innerHTML = subHTML;
+    sub.classList.remove("hidden");
+    sub.classList.add("visible");
+    exit.classList.remove("hidden");
+    exit.classList.add("visible");
+    exit.disabled = false;
+    for(let i = 0;i < 4;i++) { //option button
+        doc.getElementById("option" + String.fromCharCode(65+i)).addEventListener("click", function() {choose(rand[i])})
+    }
     newWords();
-    mainHTML = main.innerHTML
     main.remove();
-    sub.classList.remove("hidden")
-    sub.classList.add("visible")
 });
 
-//exit button
-sub.querySelector("#exit").addEventListener("click", function() {location.reload();});
-
-for(let i = 0;i < 4;i++) { //option button
-    doc.getElementById("option" + String.fromCharCode(65+i)).addEventListener("click", function() {choose(rand[i])})
-}
+exit.addEventListener("click", function() {location.reload();});
