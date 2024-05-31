@@ -73,4 +73,4 @@ words = [
     []
 ];
 
-mainHTML = "";
+subHTML = "<br><br><br><span id = \"content\"></span><br><br><br><button id = \"optionA\" class = \"op\">a</button><br><button id = \"optionB\" class = \"op\">b</button><br><button id = \"optionC\" class = \"op\">c</button><br><button id = \"optionD\" class = \"op\">d</button>"
