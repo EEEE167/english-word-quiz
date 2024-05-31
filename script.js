@@ -9,7 +9,7 @@ for (let i = 0;i < lessons.length;i++) {
     choosenL.push(false);
 }
 
-for(let i = 0;i < 13;i++) doc.getElementById("animation").innerHTML += "<li></li>";
+for(let i = 0;i < 15;i++) doc.getElementById("animation").innerHTML += "<li></li>";
 
 for(let i = 0;i < lessons.length;i++) { // lessons button
     les.innerHTML += "<button class = \"l notchoosen\" id = \"" + i.toString() + "\" >" + lessons[i] + "</button><br><br>";
