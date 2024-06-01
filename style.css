@@ -137,10 +137,9 @@ body {
 }
 
 #WA {
-    color:rgb(20, 20, 20);
-    position: absolute;
-    left: 29%;
-    top: 14%;
+    color:red;
+    left: 130px;
+    top: 105px;
     z-index: 0;
 }
 
