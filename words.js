@@ -89,4 +89,4 @@ words = [
     ]
 ];
 
-quizHTML = "<br><br><br><span id = \"content\"></span><br><br><br><button id = \"A\" class = \"op\">a</button><br><button id = \"B\" class = \"op\">b</button><br><button id = \"C\" class = \"op\">c</button><br><button id = \"D\" class = \"op\">d</button>"
+quizHTML = "<br><br><br><button id = \"wrongcnt\" disabled>0</button><span id = \"content\"></span><button id = \"correctcnt\" disabled>0</button><br><br><br><button id = \"A\" class = \"op\">a</button><br><button id = \"B\" class = \"op\">b</button><br><button id = \"C\" class = \"op\">c</button><br><button id = \"D\" class = \"op\">d</button><span id = \"WA\"></span>"

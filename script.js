@@ -2,11 +2,12 @@ const doc = document;
 const main = doc.getElementById("main");
 const options = doc.getElementById("options");
 const exit = doc.getElementById("exit");
-curwords = [], choosenL = [], bookid = -1, ButtonArr = [], correct = 0, wrong = 0, start = false;
+curwords = [], choosenL = [], bookid = -1, correct = 0, wrong = 0, start = false;
 
 exit.addEventListener("click", function() {location.reload();});
 
-for(let i = 0;i < 19;i++) doc.getElementById("animation").innerHTML += "<li></li>";
+for(let i = 0;i < 19;i++) doc.getElementById("animation1").innerHTML += "<li></li>";
+for(let i = 0;i < 19;i++) doc.getElementById("animation2").innerHTML += "<li></li>";
 for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventListener("click", function() {
     bookid = i;
     ButtonUpdate(bookid);
@@ -18,7 +19,7 @@ function random(max) {
         tmpR = Math.floor(Math.random() * (max + 1));
         if (!arr.includes(tmpR)) arr.push(tmpR);
     }
-    arr.push(Math.floor(Math.random() * (4)))
+    arr.push(Math.floor(Math.random() * (4)));
     return arr;
 }
 
@@ -34,7 +35,12 @@ function newWords() {
 function answer(optionid) {
     if (curwords[optionid][0] == curwords[rand[rand[4]]][0]) {
         correct++;
-    } else wrong++;
+    } else {
+        doc.getElementById("WA").innerHTML = curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1] + "<br>✘: " + curwords[optionid][1]
+        wrong++;
+    }
+    doc.getElementById("correctcnt").innerHTML = correct;
+    doc.getElementById("wrongcnt").innerHTML = wrong;
 
     console.log(correct, wrong);
     newWords();
@@ -65,7 +71,7 @@ main.querySelector("#start").addEventListener("click", function() { // start but
         for (let j = 0;j < words[bookid][i].length;j++) curwords.push(words[bookid][i][j]);
     }
     if (curwords.length < 4) {
-        window.alert("請至少選擇一課")
+        window.alert("請至少選擇一課");
         return;
     }
     main.innerHTML = quizHTML;

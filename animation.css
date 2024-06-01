@@ -1,174 +1,330 @@
-/* @keyframes wave {
-    0% {bottom: -5%; rotate: 0deg;}
-    10% {bottom: 15%;}
-    20% {bottom: 30%;}
-    30% {bottom: 40%;}
-    40% {bottom: 47%;}
-    50% {bottom: 50%; background-color: rgb(0, 191, 255);}
-    60% {bottom: 30%;}
-    70% {bottom: 15%;}
-    80% {bottom: 5%;}
-    90% {bottom: -2%;}
-    100% {bottom: -5%; rotate: 3600deg;}
-} */
-
-@keyframes wave {
-    0% {bottom: -5%; rotate: 0deg;}
-    10% {bottom: 10%;}
-    20% {bottom: 23%;}
-    30% {bottom: 34%;}
-    40% {bottom: 43%;}
-    50% {bottom: 50%; background-color: rgb(0, 0, 255);}
-    60% {bottom: 43%;}
-    70% {bottom: 34%;}
-    80% {bottom: 23%;}
-    90% {bottom: 10%;}
-    100% {bottom: -5%; rotate: 3600deg;}
+@keyframes wave1 {
+    0% {bottom: 0%; rotate: 0deg; width: 10px; height: 10px;}
+    10% {bottom: 14%;}
+    20% {bottom: 26%;}
+    30% {bottom: 36%;}
+    40% {bottom: 44%;}
+    50% {bottom: 50%; background-color: rgb(0, 0, 255); width: 30px; height: 30px;}
+    60% {bottom: 44%;}
+    70% {bottom: 36%;}
+    80% {bottom: 26%;}
+    90% {bottom: 14%;}
+    100% {bottom: 0%; rotate: 3600deg; width: 10px; height: 10px;}
 }
 
-#animation{
+@keyframes wave2 {
+    0% {top: 0%; rotate: 0deg; width: 10px; height: 10px;}
+    10% {top: 14%;}
+    20% {top: 26%;}
+    30% {top: 36%;}
+    40% {top: 44%;}
+    50% {top: 50%; background-color: rgb(0, 0, 255); width: 30px; height: 30px;}
+    60% {top: 44%;}
+    70% {top: 36%;}
+    80% {top: 26%;}
+    90% {top: 14%;}
+    100% {top: 0%; rotate: 3600deg; width: 10px; height: 10px;}
+}
+
+#animation1 {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#animation1 li{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     z-index: -1;
-}
-
-#animation li{
-    bottom: -5%;
+    bottom: 0%;
     position: absolute;
     display: block;
     list-style: none;
     background-color: red;
-    animation: wave 5s linear infinite;
-    overflow: visible;
-    z-index: -1;
+    animation: wave1 5s linear infinite;
 }
 
-#animation li:nth-child(1){
+#animation2 {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#animation2 li{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    top: 0%;
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: red;
+    animation: wave2 5s linear infinite;
+}
+
+#animation1 li:nth-child(1){
     left: 5%;
     width: 10px;
     height: 10px;
     animation-delay: 0s;
 }
 
-#animation li:nth-child(2){
+#animation1 li:nth-child(2){
     left: 10%;
     width: 10px;
     height: 10px;
     animation-delay: 0.5s;
 }
 
-#animation li:nth-child(3){
+#animation1 li:nth-child(3){
     left: 15%;
     width: 10px;
     height: 10px;
     animation-delay: 1s;
 }
 
-#animation li:nth-child(4){
+#animation1 li:nth-child(4){
     left: 20%;
     width: 10px;
     height: 10px;
     animation-delay: 1.5s;
 }
 
-#animation li:nth-child(5){
+#animation1 li:nth-child(5){
     left: 25%;
     width: 10px;
     height: 10px;
     animation-delay: 2s;
 }
 
-#animation li:nth-child(6){
+#animation1 li:nth-child(6){
     left: 30%;
     width: 10px;
     height: 10px;
     animation-delay: 2.5s;
 }
 
-#animation li:nth-child(7){
+#animation1 li:nth-child(7){
     left: 35%;
     width: 10px;
     height: 10px;
     animation-delay: 3s;
 }
 
-#animation li:nth-child(8){
+#animation1 li:nth-child(8){
     left: 40%;
     width: 10px;
     height: 10px;
     animation-delay: 3.5s;
 }
 
-#animation li:nth-child(9){
+#animation1 li:nth-child(9){
     left: 45%;
     width: 10px;
     height: 10px;
     animation-delay: 4s;
 }
 
-#animation li:nth-child(10){
+#animation1 li:nth-child(10){
     left: 50%;
     width: 10px;
     height: 10px;
     animation-delay: 4.5s;
 }
 
-#animation li:nth-child(11){
+#animation1 li:nth-child(11){
     left: 55%;
     width: 10px;
     height: 10px;
     animation-delay: 5s;
 }
 
-#animation li:nth-child(12){
+#animation1 li:nth-child(12){
     left: 60%;
     width: 10px;
     height: 10px;
     animation-delay: 5.5s;
 }
 
-#animation li:nth-child(13){
+#animation1 li:nth-child(13){
     left: 65%;
     width: 10px;
     height: 10px;
     animation-delay: 6s;
 }
 
-#animation li:nth-child(14){
+#animation1 li:nth-child(14){
     left: 70%;
     width: 10px;
     height: 10px;
     animation-delay: 6.5s;
 }
 
-#animation li:nth-child(15){
+#animation1 li:nth-child(15){
     left: 75%;
     width: 10px;
     height: 10px;
     animation-delay: 7s;
 }
 
-#animation li:nth-child(16){
+#animation1 li:nth-child(16){
     left: 80%;
     width: 10px;
     height: 10px;
     animation-delay: 7.5s;
 }
 
-#animation li:nth-child(17){
+#animation1 li:nth-child(17){
     left: 85%;
     width: 10px;
     height: 10px;
     animation-delay: 8s;
 }
 
-#animation li:nth-child(18){
+#animation1 li:nth-child(18){
     left: 90%;
     width: 10px;
     height: 10px;
     animation-delay: 8.5s;
 }
 
-#animation li:nth-child(19){
+#animation1 li:nth-child(19){
     left: 95%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 9s;
+}
+
+#animation2 li:nth-child(1){
+    left: 95%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0s;
+}
+
+#animation2 li:nth-child(2){
+    left: 90%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0.5s;
+}
+
+#animation2 li:nth-child(3){
+    left: 85%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 1s;
+}
+
+#animation2 li:nth-child(4){
+    left: 80%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 1.5s;
+}
+
+#animation2 li:nth-child(5){
+    left: 75%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 2s;
+}
+
+#animation2 li:nth-child(6){
+    left: 70%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 2.5s;
+}
+
+#animation2 li:nth-child(7){
+    left: 65%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 3s;
+}
+
+#animation2 li:nth-child(8){
+    left: 60%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 3.5s;
+}
+
+#animation2 li:nth-child(9){
+    left: 55%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 4s;
+}
+
+#animation2 li:nth-child(10){
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 4.5s;
+}
+
+#animation2 li:nth-child(11){
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 5s;
+}
+
+#animation2 li:nth-child(12){
+    left: 40%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 5.5s;
+}
+
+#animation2 li:nth-child(13){
+    left: 35%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 6s;
+}
+
+#animation2 li:nth-child(14){
+    left: 30%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 6.5s;
+}
+
+#animation2 li:nth-child(15){
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 7s;
+}
+
+#animation2 li:nth-child(16){
+    left: 20%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 7.5s;
+}
+
+#animation2 li:nth-child(17){
+    left: 15%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 8s;
+}
+
+#animation2 li:nth-child(18){
+    left: 10%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 8.5s;
+}
+
+#animation2 li:nth-child(19){
+    left: 5%;
     width: 10px;
     height: 10px;
     animation-delay: 9s;
