@@ -137,8 +137,9 @@ body {
 }
 
 #WA {
-    color:red;
-    left: 130px;
+    color: rgb(20, 20, 20);
+    position: absolute;
+    left: 425px;
     top: 105px;
     z-index: 0;
 }
@@ -156,4 +157,15 @@ body {
 #correctcnt::before {
     color: green;
     content: "✔ ";
+}
+
+#bg {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: url("image/background.png") repeat;
+    overflow: auto;
+    z-index: -1;
 }

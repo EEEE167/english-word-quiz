@@ -42,7 +42,8 @@
     display: block;
     list-style: none;
     background-color: red;
-    animation: wave1 5s linear infinite;
+    animation: wave1 1.3s linear infinite;
+    filter: blur(10px);
 }
 
 #animation2 {
@@ -61,7 +62,8 @@
     display: block;
     list-style: none;
     background-color: red;
-    animation: wave2 5s linear infinite;
+    animation: wave2 1.3s linear infinite;
+    filter: blur(10px);
 }
 
 #animation1 li:nth-child(1){

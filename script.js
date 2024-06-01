@@ -6,8 +6,8 @@ curwords = [], choosenL = [], bookid = -1, correct = 0, wrong = 0, start = false
 
 exit.addEventListener("click", function() {location.reload();});
 
-for(let i = 0;i < 19;i++) doc.getElementById("animation1").innerHTML += "<li></li>";
-for(let i = 0;i < 19;i++) doc.getElementById("animation2").innerHTML += "<li></li>";
+// for(let i = 0;i < 19;i++) doc.getElementById("animation1").innerHTML += "<li></li>";
+// for(let i = 0;i < 19;i++) doc.getElementById("animation2").innerHTML += "<li></li>";
 for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventListener("click", function() {
     bookid = i;
     ButtonUpdate(bookid);
@@ -42,7 +42,6 @@ function answer(optionid) {
     doc.getElementById("correctcnt").innerHTML = correct;
     doc.getElementById("wrongcnt").innerHTML = wrong;
 
-    console.log(correct, wrong);
     newWords();
 }
 
