@@ -1,3 +1,3 @@
-# website
+# :D
 
-**a cool website**
+**為了拯救我的英文學分而誕生的工具**
