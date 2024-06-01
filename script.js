@@ -1,13 +1,12 @@
 const doc = document;
 const main = doc.getElementById("main");
-const sub = doc.getElementById("sub");
 const options = doc.getElementById("options");
 const exit = doc.getElementById("exit");
 curwords = [], choosenL = [], bookid = -1, ButtonArr = [], correct = 0, wrong = 0, start = false;
 
 exit.addEventListener("click", function() {location.reload();});
 
-for(let i = 0;i < 15;i++) doc.getElementById("animation").innerHTML += "<li></li>";
+for(let i = 0;i < 19;i++) doc.getElementById("animation").innerHTML += "<li></li>";
 for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventListener("click", function() {
     bookid = i;
     ButtonUpdate(bookid);
@@ -25,7 +24,7 @@ function random(max) {
 
 function newWords() {
     rand = random(curwords.length-1);
-    doc.getElementById("content").innerHTML = curwords[rand[rand[4]]][0];
+    doc.getElementById("content").innerHTML = "<strong>" + curwords[rand[rand[4]]][0] + "</strong>";
     for(let i = 0;i < 4;i++) {
         doc.getElementById(String.fromCharCode(65 + i)).innerHTML = "<strong>" + curwords[rand[i]][1] + "</strong>";
     }
@@ -44,21 +43,16 @@ function answer(optionid) {
 function ButtonUpdate(bookid) {
     exit.classList.remove("hidden"); exit.classList.add("visible"); exit.disabled = false;
     options.innerHTML = "";
-    if (bookid != 0) {
-        options.innerHTML = "<button class = \"working\">施工中<span>(*•̀ㅂ•́)و<br></span></button><br>";
-    }
     for(let i = 0;i < Books[bookid].length;i++) { // button display
-        options.innerHTML += "<button class = \"l notchoosen\" id = \"" + i.toString() + "\" >" + Books[bookid][i] + "</button><br><br>";
+        options.innerHTML += "<button class = \"Button\" id = \"" + i.toString() + "\" >" + Books[bookid][i] + "</button><br>";
     }
     for(let i = 0;i < Books[bookid].length;i++) {
         doc.getElementById(i.toString()).addEventListener("click", function() {
             if (choosenL[i]) {
                 choosenL[i] = false;
                 doc.getElementById(i.toString()).classList.remove("choosen");
-                doc.getElementById(i.toString()).classList.add("notchoosen");
             } else {
                 choosenL[i] = true;
-                doc.getElementById(i.toString()).classList.remove("notchoosen");
                 doc.getElementById(i.toString()).classList.add("choosen");
             }
         });
@@ -74,10 +68,8 @@ main.querySelector("#start").addEventListener("click", function() { // start but
         window.alert("請至少選擇一課")
         return;
     }
-    sub.innerHTML = subHTML;
-    sub.classList.remove("hidden"); sub.classList.add("visible");
+    main.innerHTML = quizHTML;
     for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i]);});
     newWords();
-    main.remove();
     start = true;
 });

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>英文學分保衛戰</title>
+        <title>英文單字練習</title>
         <meta charset="utf-8">
         <link href = "style.css" rel = "stylesheet">
         <link href = "animation.css" rel = "stylesheet">
     </head>
 
     <body>
+        <span id = "exit-span"><button id = "exit" class = "hidden" disabled>exit</button></span>
         <div id = "main">
             <button type = "submit" id = "start">開始測驗</button>
             <br><br>
             <div id = "options">
-                <button id = "option0" class = "book">課本</button><br>
-                <button id = "option1" class = "book">雜誌</button><br>
-                <button id = "option2" class = "book">字彙王</button>
+                <button id = "option0" class = "Button">課本</button><br>
+                <button id = "option1" class = "Button">雜誌</button><br>
+                <button id = "option2" class = "Button">字彙王</button>
             </div>
         </div>
-        <span id = "exit-span"><button id = "exit" class = "hidden" disabled>exit</button></span>
-        <div id = "sub" class = "hidden"></div>
         <div id = "area" ><ul id = "animation"></ul></div>
         <script src = "words.js"></script>
         <script src = "script.js"></script>

@@ -3,66 +3,36 @@ body {
     background-color: black;
 }
 
-.book {
-    color: aliceblue;
-    background-color: rgb(20, 20, 20);
-    border: 4px solid aliceblue;
-    transition: 0.4s;
-    width: 128px;
-    border-radius: 20px;
-    position: relative;
-    padding: 16px;
-    font-size: 16px;
-    cursor: pointer;
+.Button {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    width: 150px;
+    height: 70px;
+    border: 4px solid white;
+    border-radius: 15px;
     margin: 10px;
+    cursor: pointer;
 }
 
-.book:hover {
-    top: -5px;
+.Button:hover {
+    background-color: rgb(50, 50, 50);
 }
 
-#sub {
-    background-color: rgb(15, 15, 15);
+#main {
+    background-color: rgb(20, 20, 20);
     text-align: center;
     border: 4px solid white;
-    width: 50%;
+    width: 60%;
     margin: auto;
     margin-top: 20px;
     padding: 10px;
     border-radius: 20px;
 }
 
-.l {
-    display: inline-block;
-    background-color: rgb(20, 20, 20);
-    color: white;
-    padding: 32px 32px;
-    border: 4px solid white;
-    border-radius: 10px;
-    transition: 0.4s;
-    position: relative;
-    cursor: pointer;
-}
-
-.notchoosen:before {
-    content: "✔";
-    opacity: 0;
-    position: relative;
-    transition: 0.4s;
-    left: -20px;
-}
-
-.notchoosen:hover:before {
-    opacity: 1;
-    left: -20px;
-}
-
 .choosen:before {
     content: "✔";
-    opacity: 1;
     position: relative;
     color: rgb(0, 255, 0);
-    transition: 0.4s;
     left: -20px;
 }
 
@@ -72,22 +42,23 @@ body {
     padding: 16px 32px;
     font-size: 25px;
     border-radius: 100px;
-    border: 4px solid yellow;
+    border: 2px solid black;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 #start:hover {
-    background-color: yellow;
-    color: black;
+    border-color: white;
+    background-color: black;
+    color: white;
 }
 
 .op {
-    border:2px solid rgb(17, 172, 17);
-    border-radius: 15px;
+    border:2px solid white;
+    border-radius: 20px;
     background-color: white;
     color: black;
     width: 200px;
-    padding: 24px;
+    padding: 20px;
     font-size: 20px;
     transition-duration: 0.4s;
     margin: 16px 4px;
@@ -97,16 +68,7 @@ body {
 
 .op:hover {
     color: white;
-    background-color: green;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-.visible {
-    transition: opacity 1s;
-    opacity: 1;
+    background-color: black;
 }
 
 #content {
@@ -116,12 +78,6 @@ body {
     padding: 16px 32px;
     border: 4px solid white;
     border-radius: 20px;
-    transition-duration: 0.4s;
-}
-
-#content:hover {
-    background-color: white;
-    color: black;
 }
 
 #exit {
@@ -147,39 +103,4 @@ body {
 #exit:hover:before {
     opacity: 1;
     left: 15px;
-}
-
-.working {
-    background-color: rgb(25, 25, 25);
-    border: 4px solid white;
-    padding: 16px 32px;
-    border-radius: 10px;
-    width: 200px;
-    transition: 0.4s;
-    color: white;
-    margin: 10px;
-}
-
-.working span {
-    position: relative;
-    transition: 0.4s;
-}
-
-.working:hover span {
-    transition: 0.4s;
-    padding-left: 20px;
-}
-
-.working span:before {
-    content: "Ɛ=";
-    position: relative;
-    transition: 0.5s;
-    opacity: 0;
-    left: 10px;
-}
-
-.working:hover span:before {
-    left: -10px;
-    transition: 0.5s;
-    opacity: 1;
 }
