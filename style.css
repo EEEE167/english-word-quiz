@@ -1,3 +1,8 @@
+@keyframes move {
+    from {background-position: bottom;}
+    to {background-position: top;}
+}
+
 body {
     text-align: center;
     background-color: black;
@@ -131,7 +136,7 @@ body {
 }
 
 #wrongcnt:hover {
-    padding-left: 250px;
+    padding-left: 300px;
     padding-top: 50px;
     z-index: 0;
 }
@@ -168,4 +173,5 @@ body {
     background: url("image/background.png") repeat;
     overflow: auto;
     z-index: -1;
+    animation: move 15s linear infinite;
 }
