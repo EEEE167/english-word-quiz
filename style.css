@@ -117,7 +117,7 @@ body {
     left: 15px;
 }
 
-#wrongcnt {
+#incorcnt {
     border-radius: 10px;
     left: 21%;
     position: absolute;
@@ -129,24 +129,10 @@ body {
     z-index: 1;
 }
 
-#wrongcnt::before {
+#incorcnt::before {
     opacity: 1;
     content: "✘ ";
     color: red;
-}
-
-#wrongcnt:hover {
-    padding-left: 300px;
-    padding-top: 50px;
-    z-index: 0;
-}
-
-#WA {
-    color: rgb(20, 20, 20);
-    position: absolute;
-    left: 425px;
-    top: 105px;
-    z-index: 0;
 }
 
 #correctcnt {
@@ -157,6 +143,7 @@ body {
     color: black;
     background-color: white;
     padding: 16px 40px;
+    transition: 1s;
 }
 
 #correctcnt::before {
@@ -164,7 +151,11 @@ body {
     content: "✔ ";
 }
 
-#bg {
+#correctcnt:active {
+    rotate: 360deg;
+}
+
+#background {
     position: fixed;
     bottom: 0px;
     left: 0px;

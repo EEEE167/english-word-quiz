@@ -2,7 +2,11 @@ const doc = document;
 const main = doc.getElementById("main");
 const options = doc.getElementById("options");
 const exit = doc.getElementById("exit");
-curwords = [], choosenL = [], bookid = -1, correct = 0, wrong = 0, start = false;
+curwords = [], choosenL = [];
+bookid = -1;
+correct = 0, incorrect = 0;
+start = false;
+incorword = ":D";
 
 exit.addEventListener("click", function() {location.reload();});
 
@@ -13,7 +17,7 @@ for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventLis
     ButtonUpdate(bookid);
 });
 
-function random(max) {
+function random(max) { // (^ω^ )
     arr = [];
     while(arr.length < 4) {
         tmpR = Math.floor(Math.random() * (max + 1));
@@ -23,7 +27,7 @@ function random(max) {
     return arr;
 }
 
-function newWords() {
+function newWords() { // :D
     rand = random(curwords.length-1);
     doc.getElementById("content").innerHTML = "<strong>" + curwords[rand[rand[4]]][0] + "</strong>";
     for(let i = 0;i < 4;i++) {
@@ -31,18 +35,24 @@ function newWords() {
     }
 }
 
-// answer and check
-function answer(optionid) {
+function answer(optionid) { // answer and check
     if (curwords[optionid][0] == curwords[rand[rand[4]]][0]) {
         correct++;
     } else {
-        doc.getElementById("WA").innerHTML = curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1] + "<br>✘: " + curwords[optionid][1]
-        wrong++;
+        incorword = "<br>" + curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1] + "<br>✘: " + curwords[optionid][1];
+        incorrect++;
     }
     doc.getElementById("correctcnt").innerHTML = correct;
-    doc.getElementById("wrongcnt").innerHTML = wrong;
+    doc.getElementById("incorcnt").innerHTML = incorrect;
 
     newWords();
+}
+
+function uStupid() { // incorrectcnt button
+    let WA = doc.getElementById("incorcnt");
+    console.log(WA.innerHTML == incorrect)
+    if (WA.innerHTML == incorrect) WA.innerHTML = incorword;
+    else WA.innerHTML = incorrect;
 }
 
 function ButtonUpdate(bookid) {
@@ -75,6 +85,7 @@ main.querySelector("#start").addEventListener("click", function() { // start but
     }
     main.innerHTML = quizHTML;
     for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i]);});
+    doc.getElementById("incorcnt").addEventListener("click", function() {uStupid();});
     newWords();
     start = true;
 });
