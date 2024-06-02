@@ -6,7 +6,9 @@ Books = [
         "Review 3"
     ],
     [ // maganize
-
+        "6/1",
+        "6/3~4",
+        "6/5~6"
     ],
     [ // stupid book
         "Unit 22"
@@ -128,7 +130,47 @@ words = [
         ]
     ],
     [ // maganize
-
+        [
+            ["doughnut", ["甜甜圈"]],
+            ["crispy", ["酥脆的"]],
+            ["raw", ["生的"]],
+            ["punch", ["在...打孔", "打孔器"]],
+            ["bacon", ["培根"]],
+            ["punchy", ["頭昏眼花的"]],
+            ["punch line", ["笑點", "梗"]],
+            ["dough", ["麵團"]],
+            ["deep-fry", ["油炸"]],
+            ["glaze", ["糖汁"]]
+        ],
+        [
+            ["categorize", ["將...分類"]],
+            ["external", ["外部的"]],
+            ["workforce", ["勞動人口"]],
+            ["extensively", ["廣泛地"]],
+            ["hybird", ["混合"]],
+            ["pandemic", ["大流行病"]],
+            ["correlate", ["相關", "聯繫"]],
+            ["invaluable", ["極有用的", "寶貴的"]],
+            ["that is", ["確切來說"]],
+            ["thrive", ["茁壯成長"]],
+            ["mindest", ["心態", "思維方式"]]
+        ],
+        [
+            ["stunning", ["極漂亮的"]],
+            ["wildlife", ["野生生物"]],
+            ["classification", ["分類", "類別"]],
+            ["frequently", ["經常地"]],
+            ["conservation", ["保育", "保護"]],
+            ["informative", ["提供資訊的", "增長見聞的"]],
+            ["highlight", ["精彩的部份"]],
+            ["exotic", ["異國風情的", "奇異的"]],
+            ["sustainable", ["可持續的"]],
+            ["exhibit", ["展覽"]],
+            ["archipelago", ["群島"]],
+            ["geological", ["地質的"]],
+            ["rainforest", ["雨林"]],
+            ["sea level", ["海平面"]]
+        ]
     ],
     [ // stupid book 
         [

@@ -1,17 +1,15 @@
 const doc = document;
 const main = doc.getElementById("main");
 const options = doc.getElementById("options");
-const exit = doc.getElementById("exit");
+const back = doc.getElementById("back");
 curwords = [], choosenL = [];
 bookid = -1;
 correct = 0, incorrect = 0;
 start = false;
 incorword = ":D";
 
-exit.addEventListener("click", function() {location.reload();});
+back.addEventListener("click", function() {location.reload();});
 
-// for(let i = 0;i < 19;i++) doc.getElementById("animation1").innerHTML += "<li></li>";
-// for(let i = 0;i < 19;i++) doc.getElementById("animation2").innerHTML += "<li></li>";
 for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventListener("click", function() {
     bookid = i;
     ButtonUpdate(bookid);
@@ -57,7 +55,7 @@ function uStupid() { // incorrectcnt button
 }
 
 function ButtonUpdate(bookid) {
-    exit.classList.remove("hidden"); exit.classList.add("visible"); exit.disabled = false;
+    back.classList.remove("hidden"); back.classList.add("visible"); back.disabled = false;
     options.innerHTML = "";
     for(let i = 0;i < Books[bookid].length;i++) { // button display
         options.innerHTML += "<button class = \"Button\" id = \"" + i.toString() + "\" >" + Books[bookid][i] + "</button><br>";
