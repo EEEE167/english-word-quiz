@@ -16,14 +16,16 @@ for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventLis
     bookid = i;
     ButtonUpdate(bookid);
 });
-
-function random(max) { // (^ω^ )
+function random(max) { // ( ^ω^)
     arr = [];
     while(arr.length < 4) {
         tmpR = Math.floor(Math.random() * (max + 1));
         if (!arr.includes(tmpR)) arr.push(tmpR);
     }
     arr.push(Math.floor(Math.random() * (4)));
+    for(let i = 0;i < 4;i++) {
+        arr.push(Math.floor(Math.random() * curwords[arr[i]][1].length));
+    }    
     return arr;
 }
 
@@ -31,15 +33,15 @@ function newWords() { // :D
     rand = random(curwords.length-1);
     doc.getElementById("content").innerHTML = "<strong>" + curwords[rand[rand[4]]][0] + "</strong>";
     for(let i = 0;i < 4;i++) {
-        doc.getElementById(String.fromCharCode(65 + i)).innerHTML = "<strong>" + curwords[rand[i]][1] + "</strong>";
+        doc.getElementById(String.fromCharCode(65 + i)).innerHTML = "<strong>" + curwords[rand[i]][1][rand[5+i]] + "</strong>";
     }
 }
 
-function answer(optionid) { // answer and check
-    if (curwords[optionid][0] == curwords[rand[rand[4]]][0]) {
+function answer(optionid, order) { // answer and check
+    if (curwords[rand[rand[4]]][1].includes(curwords[optionid][1][rand[5+order]])) {
         correct++;
     } else {
-        incorword = "<br>" + curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1] + "<br>✘: " + curwords[optionid][1];
+        incorword = "<br>" + curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1][rand[5+rand[4]]] + "<br>✘: " + curwords[optionid][1][rand[5+order]];
         incorrect++;
     }
     doc.getElementById("correctcnt").innerHTML = correct;
@@ -50,7 +52,6 @@ function answer(optionid) { // answer and check
 
 function uStupid() { // incorrectcnt button
     let WA = doc.getElementById("incorcnt");
-    console.log(WA.innerHTML == incorrect)
     if (WA.innerHTML == incorrect) WA.innerHTML = incorword;
     else WA.innerHTML = incorrect;
 }
@@ -84,7 +85,7 @@ main.querySelector("#start").addEventListener("click", function() { // start but
         return;
     }
     main.innerHTML = quizHTML;
-    for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i]);});
+    for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i], i);});
     doc.getElementById("incorcnt").addEventListener("click", function() {uStupid();});
     newWords();
     start = true;
