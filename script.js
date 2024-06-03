@@ -41,11 +41,17 @@ function answer(optionid, order) { // answer and check
         correct++;
     } else {
         incorword = curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1][rand[5+rand[4]]] + "<br>✘: " + curwords[optionid][1][rand[5+order]];
+        doc.getElementById("incorcnt").innerHTML = "D:";
     }
     doc.getElementById("correctcnt").innerHTML = correct.toString() + '/' + ans.toString();
-    doc.getElementById("incorcnt").innerHTML = incorword;
 
     newWords();
+}
+
+function uStupid() { // incorrectcnt button
+    let WA = doc.getElementById("incorcnt");
+    if (WA.innerHTML == "D:") WA.innerHTML = incorword;
+    else if (WA.innerHTML != ":D") WA.innerHTML = "D:";
 }
 
 function ButtonUpdate(bookid) {
@@ -78,6 +84,7 @@ main.querySelector("#start").addEventListener("click", function() { // start but
     }
     main.innerHTML = quizHTML;
     for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i], i);});
+    doc.getElementById("incorcnt").addEventListener("click", function() {uStupid();});
     newWords();
     start = true;
 });
