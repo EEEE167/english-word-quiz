@@ -27,7 +27,7 @@ words = [
             ["technological", ["科技的"]],
             ["conference", ["會議", "研討會"]],
             ["worth", ["值得", "價值", "意義"]],
-            ["wotrhy", ["值得的"]],
+            ["worthy", ["值得的"]],
             ["increasingly", ["愈來愈..."]],
             ["increase", ["增加"]],
             ["organizer", ["組織者", "籌辦者"]],

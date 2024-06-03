@@ -10,10 +10,12 @@ body {
     text-align: center;
     background: hsla(184, 85%, 63%, 1);
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(45deg, hsla(184, 85%, 63%, 1) 0%, hsla(240, 46%, 76%, 1) 50%, hsla(319, 72%, 75%, 1) 100%);
     background: -moz-linear-gradient(45deg, hsla(184, 85%, 63%, 1) 0%, hsla(240, 46%, 76%, 1) 50%, hsla(319, 72%, 75%, 1) 100%);
     background: -webkit-linear-gradient(45deg, hsla(184, 85%, 63%, 1) 0%, hsla(240, 46%, 76%, 1) 50%, hsla(319, 72%, 75%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4FE6F1", endColorstr="#A6A6DE", GradientType=1 );
+    /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4FE6F1", endColorstr="#A6A6DE", GradientType=1 ); */
 }
 
 .Button {
@@ -21,9 +23,10 @@ body {
     color: white;
     border: 4px solid white;
     border-radius: 15px;
-    width: 150px;
+    width: 165px;
     height: 70px;
     margin: 10px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -80,7 +83,7 @@ body {
     width: 200px;
     padding: 20px;
     margin: 16px 4px;
-    font-size: 20px;
+    font-size: 23px;
     transition-duration: 0.4s;
     cursor: pointer;
     display: inline-block;
@@ -132,7 +135,7 @@ body {
     color: black;
     border-radius: 10px;
     padding: 16px 40px;
-    left: 21%;
+    right: 31%;
     font-size: 24px;
     transition: padding 0.4s;
     cursor: pointer;
