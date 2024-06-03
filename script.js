@@ -6,7 +6,6 @@ curwords = [], choosenL = [];
 bookid = -1;
 correct = 0, ans = 0;
 start = false;
-incorword = ":D";
 
 back.addEventListener("click", function() {location.reload();});
 
@@ -41,17 +40,17 @@ function answer(optionid, order) { // answer and check
         correct++;
     } else {
         incorword = curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1][rand[5+rand[4]]] + "<br>✘: " + curwords[optionid][1][rand[5+order]];
-        doc.getElementById("incorcnt").innerHTML = "D:";
+        doc.getElementById("incorcnt").innerHTML = "<i class=\"fa-regular fa-face-frown\"></i>";
     }
-    doc.getElementById("correctcnt").innerHTML = correct.toString() + '/' + ans.toString();
+    doc.getElementById("correctcnt").innerHTML = "<i class=\"fa-solid fa-check\"></i> " + correct.toString() + '/' + ans.toString();
 
     newWords();
 }
 
 function uStupid() { // incorrectcnt button
     let WA = doc.getElementById("incorcnt");
-    if (WA.innerHTML == "D:") WA.innerHTML = incorword;
-    else if (WA.innerHTML != ":D") WA.innerHTML = "D:";
+    if (WA.innerHTML == "<i class=\"fa-regular fa-face-frown\" aria-hidden=\"true\"></i>") WA.innerHTML = incorword;
+    else if (ans != correct) WA.innerHTML = "<i class=\"fa-regular fa-face-frown\"></i>";
 }
 
 function ButtonUpdate(bookid) {

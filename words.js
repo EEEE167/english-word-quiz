@@ -236,4 +236,4 @@ words = [
     ]
 ];
 
-quizHTML = "<br><br><br><button id = \"incorcnt\">:D</button><span id = \"content\"></span><button id = \"correctcnt\">0/0</button><br><br><br><button id = \"A\" class = \"op\">a</button><br><button id = \"B\" class = \"op\">b</button><br><button id = \"C\" class = \"op\">c</button><br><button id = \"D\" class = \"op\">d</button><span id = \"WA\"></span>"
+quizHTML = "<br><br><br><button id = \"incorcnt\"><i class=\"fa-regular fa-face-smile\"></i></button><span id = \"content\"></span><button id = \"correctcnt\"><i class=\"fa-solid fa-check\"></i> 0/0</button><br><br><br><button id = \"A\" class = \"op\">a</button><br><button id = \"B\" class = \"op\">b</button><br><button id = \"C\" class = \"op\">c</button><br><button id = \"D\" class = \"op\">d</button><span id = \"WA\"></span>"
