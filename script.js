@@ -4,7 +4,7 @@ const options = doc.getElementById("options");
 const back = doc.getElementById("back");
 curwords = [], choosenL = [];
 bookid = -1;
-correct = 0, incorrect = 0;
+correct = 0, ans = 0;
 start = false;
 incorword = ":D";
 
@@ -36,22 +36,16 @@ function newWords() { // :D
 }
 
 function answer(optionid, order) { // answer and check
+    ans++;
     if (curwords[rand[rand[4]]][1].includes(curwords[optionid][1][rand[5+order]])) {
         correct++;
     } else {
-        incorword = "<br>" + curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1][rand[5+rand[4]]] + "<br>✘: " + curwords[optionid][1][rand[5+order]];
-        incorrect++;
+        incorword = curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1][rand[5+rand[4]]] + "<br>✘: " + curwords[optionid][1][rand[5+order]];
     }
-    doc.getElementById("correctcnt").innerHTML = correct;
-    doc.getElementById("incorcnt").innerHTML = incorrect;
+    doc.getElementById("correctcnt").innerHTML = correct.toString() + '/' + ans.toString();
+    doc.getElementById("incorcnt").innerHTML = incorword;
 
     newWords();
-}
-
-function uStupid() { // incorrectcnt button
-    let WA = doc.getElementById("incorcnt");
-    if (WA.innerHTML == incorrect) WA.innerHTML = incorword;
-    else WA.innerHTML = incorrect;
 }
 
 function ButtonUpdate(bookid) {
@@ -84,7 +78,6 @@ main.querySelector("#start").addEventListener("click", function() { // start but
     }
     main.innerHTML = quizHTML;
     for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i], i);});
-    doc.getElementById("incorcnt").addEventListener("click", function() {uStupid();});
     newWords();
     start = true;
 });

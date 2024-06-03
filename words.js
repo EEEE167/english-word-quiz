@@ -5,7 +5,7 @@ Books = [
         "Lesson 9",
         "Review 3"
     ],
-    [ // maganize
+    [ // magazine
         "5/13~14",
         "6/1",
         "6/3~4",
@@ -130,7 +130,7 @@ words = [
             ["sacrifice", ["犧牲"]],
         ]
     ],
-    [ // maganize
+    [ // magazine
         [
             ["virtually", ["虛擬地"]],
             ["virtual reality", ["虛擬實境"]],
@@ -236,4 +236,4 @@ words = [
     ]
 ];
 
-quizHTML = "<br><br><br><button id = \"incorcnt\">0</button><span id = \"content\"></span><button id = \"correctcnt\">0</button><br><br><br><button id = \"A\" class = \"op\">a</button><br><button id = \"B\" class = \"op\">b</button><br><button id = \"C\" class = \"op\">c</button><br><button id = \"D\" class = \"op\">d</button><span id = \"WA\"></span>"
+quizHTML = "<br><br><br><button id = \"incorcnt\">:D</button><span id = \"content\"></span><button id = \"correctcnt\">0/0</button><br><br><br><button id = \"A\" class = \"op\">a</button><br><button id = \"B\" class = \"op\">b</button><br><button id = \"C\" class = \"op\">c</button><br><button id = \"D\" class = \"op\">d</button><span id = \"WA\"></span>"

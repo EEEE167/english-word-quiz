@@ -135,18 +135,12 @@ body {
     color: black;
     border-radius: 10px;
     padding: 16px 40px;
-    right: 31%;
+    left: 21%;
     font-size: 24px;
     transition: padding 0.4s;
     cursor: pointer;
     position: absolute;
     z-index: 1;
-}
-
-#incorcnt::before {
-    color: red;
-    opacity: 1;
-    content: "✘ ";
 }
 
 #correctcnt {
