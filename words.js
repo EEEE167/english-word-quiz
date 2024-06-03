@@ -6,6 +6,7 @@ Books = [
         "Review 3"
     ],
     [ // maganize
+        "5/13~14",
         "6/1",
         "6/3~4",
         "6/5~6"
@@ -130,6 +131,22 @@ words = [
         ]
     ],
     [ // maganize
+        [
+            ["virtually", ["虛擬地"]],
+            ["virtual reality", ["虛擬實境"]],
+            ["geographical", ["地理的"]],
+            ["rotate", ["旋轉", "轉動"]],
+            ["credible", ["可信的", "可靠的"]],
+            ["preview", ["預覽"]],
+            ["dazzle", ["使讚嘆"]],
+            ["accommodations", ["住宿"]],
+            ["inaccessible", ["無法去的"]],
+            ["accessibility", ["可到達", "易觸及"]],
+            ["with open arms", ["迎接"]],
+            ["foster", ["促進", "培養"]],
+            ["monoscopic", ["單一視野的"]],
+            ["stereoscopic", ["有立體感的"]]
+        ],
         [
             ["doughnut", ["甜甜圈"]],
             ["crispy", ["酥脆的"]],
