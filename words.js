@@ -153,7 +153,7 @@ words = [
             ["monoscopic", ["單一視野的"]],
             ["stereoscopic", ["有立體感的"]]
         ],
-        [
+        [ // 5/15~16
             ["flexible", ["靈活的", "有彈性的"]],
             ["cautious", ["謹慎的", "小心翼翼的"]],
             ["confuse", ["使困惑"]],
@@ -166,6 +166,16 @@ words = [
             ["confusingly", ["令人困惑地"]],
             ["substitute", ["替代品"]],
             ["red flag", ["示警紅旗"]]
+        ],
+        [
+            ["illustrious", ["著名的"]],
+            ["chef", ["主廚"]],
+            ["courteous", ["謙恭有禮的"]],
+            ["luxurious", ["豪華的", "奢華的"]],
+            ["presentation", ["報告", "介紹"]],
+            ["ruin", ["廢墟", "殘垣斷壁"]],
+            ["glimpse", ["一瞥"]],
+            ["
         ],
         [
             ["doughnut", ["甜甜圈"]],
