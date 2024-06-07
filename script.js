@@ -1,18 +1,51 @@
 const doc = document;
 const main = doc.getElementById("main");
-const options = doc.getElementById("options");
 const back = doc.getElementById("back");
 curwords = [], choosenL = [];
 bookid = -1;
 correct = 0, ans = 0;
 start = false;
 
-back.addEventListener("click", function() {location.reload();});
+function Init() {
+    main.innerHTML = mainHTML;
+    const options = doc.getElementById("options");
 
-for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventListener("click", function() {
-    bookid = i;
-    ButtonUpdate(bookid);
-});
+    back.classList.add("hidden"); back.disabled = true; back.addEventListener("click", goback);
+    
+    for(let i = 0;i < 3;i++) doc.getElementById("option" + i.toString()).addEventListener("click", function() {
+        bookid = i;
+        ButtonUpdate(bookid);
+    });
+
+    main.querySelector("#start").addEventListener("click", function() { // start button
+        bookid = -1, len = 0;
+        for(let i = 0;i < choosenL.length;i++) {
+            if (i >= len) bookid++, len += Books[bookid].length;
+            if (!choosenL[i]) continue;
+            for (let j = 0;j < words[bookid][i-len+Books[bookid].length].length;j++) curwords.push(words[bookid][i-len+Books[bookid].length][j]);
+        }
+        if (curwords.length < 4) {
+            window.alert("請至少選擇一課");
+            return;
+        }
+        main.innerHTML = quizHTML;
+        for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i], i);});
+        doc.getElementById("incorcnt").addEventListener("click", function() {uStupid();});
+        back.addEventListener("click", function() {location.reload();});
+        back.removeEventListener("click", goback);
+        newWords();
+        start = true;
+    });
+}
+
+for(let i = 0;i < Books.length;i++) {
+    for(let j = 0;j < Books[i].length;j++) choosenL.push(0);
+}
+
+function goback() {
+    Init();
+}
+
 function random(max) { // ( ^ω^)
     arr = [];
     while(arr.length < 4) {
@@ -54,36 +87,28 @@ function uStupid() { // incorrectcnt button
 }
 
 function ButtonUpdate(bookid) {
-    back.classList.remove("hidden"); back.classList.add("visible"); back.disabled = false;
+    back.classList.remove("hidden"); back.disabled = false;
     options.innerHTML = "";
+
+    prelen = 0;
+    for(let i = 0;i < bookid;i++) prelen += Books[i].length;
+
     for(let i = 0;i < Books[bookid].length;i++) { // button display
         options.innerHTML += "<button class = \"Button\" id = \"" + i.toString() + "\" >" + Books[bookid][i] + "</button><br>";
+        if (choosenL[prelen+i]) doc.getElementById(i.toString()).classList.add("choosen");
     }
+    
     for(let i = 0;i < Books[bookid].length;i++) {
         doc.getElementById(i.toString()).addEventListener("click", function() {
-            if (choosenL[i]) {
-                choosenL[i] = false;
+            if (choosenL[prelen+i]) {
+                choosenL[prelen+i] = false;
                 doc.getElementById(i.toString()).classList.remove("choosen");
             } else {
-                choosenL[i] = true;
+                choosenL[prelen+i] = true;
                 doc.getElementById(i.toString()).classList.add("choosen");
             }
         });
     }
 }
 
-main.querySelector("#start").addEventListener("click", function() { // start button
-    for(let i = 0;i < choosenL.length;i++) {
-        if (!choosenL[i]) continue;
-        for (let j = 0;j < words[bookid][i].length;j++) curwords.push(words[bookid][i][j]);
-    }
-    if (curwords.length < 4) {
-        window.alert("請至少選擇一課");
-        return;
-    }
-    main.innerHTML = quizHTML;
-    for(let i = 0;i < 4;i++) doc.getElementById(String.fromCharCode(65 + i)).addEventListener("click", function() {answer(rand[i], i);});
-    doc.getElementById("incorcnt").addEventListener("click", function() {uStupid();});
-    newWords();
-    start = true;
-});
+Init();

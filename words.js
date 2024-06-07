@@ -24,7 +24,7 @@ Books = [
 
 words = [
     [ // textbook
-        [
+        [ // Lesson 7
             ["seek", ["尋找", "尋求"]],
             ["series", ["系列"]],
             ["foundation", ["基金會"]],
@@ -57,7 +57,7 @@ words = [
             ["discussion", ["討論"]],
             ["method", ["方法"]]
         ],
-        [
+        [ // Lesson 8
             ["exchange", ["交換", "交流"]],
             ["expect", ["預期"]],
             ["expectation", ["期望", "預期"]],
@@ -88,7 +88,7 @@ words = [
             ["spirit", ["靈魂", "精神"]],
             ["spirital", ["精神上的"]]
         ],
-        [
+        [ // Lesson 9
             ["general", ["一般的", "非專門的"]],
             ["derive", ["起源於", "得到", "獲得"]],
             ["release", ["釋放", "發行", "排放"]],
@@ -115,7 +115,7 @@ words = [
             ["exist", ["存在"]],
             ["existence", ["存在"]],
         ],
-        [
+        [ // Review 3
             ["astronaut", ["太空人"]],
             ["gravity", ["重力"]],
             ["powdered", ["粉狀的", "製成粉的"]],
@@ -167,7 +167,7 @@ words = [
             ["substitute", ["替代品"]],
             ["red flag", ["示警紅旗"]]
         ],
-        [
+        [ // 5/17~18
             ["illustrious", ["著名的"]],
             ["chef", ["主廚"]],
             ["courteous", ["謙恭有禮的"]],
@@ -175,9 +175,76 @@ words = [
             ["presentation", ["報告", "介紹"]],
             ["ruin", ["廢墟", "殘垣斷壁"]],
             ["glimpse", ["一瞥"]],
-            ["
+            ["arena", ["競技場", "比賽場"]],
+            ["massive", ["巨大的"]],
+            ["glacier", ["冰河"]],
+            ["resident", ["居民"]],
+            ["alpine", ["高山的"]],
+            ["excursion", ["短期旅行"]],
+            ["amphitheater", ["圓形劇場"]],
+            ["gorge", ["峽谷"]]
         ],
-        [
+        [ // 5/20~21
+            ["icy", ["結冰的", "極冷的"]],
+            ["owl", ["貓頭鷹"]],
+            ["bud", ["花蕾", "葉芽"]],
+            ["dam", ["水壩"]],
+            ["fur", ["毛皮"]],
+            ["reputation", ["名譽"]],
+            ["convince", ["說服"]],
+            ["eventually", ["最終", "終於"]],
+            ["remind", ["提醒"]],
+            ["delicate", ["嬌嫩的", "脆弱的"]],
+            ["eventual", ["最終的"]],
+            ["eventuality", ["不測事件"]],
+            ["lofty", ["高的"]],
+            ["ensure", ["確保"]],
+            ["mischievous", ["惡作劇的"]],
+            ["elusive", ["難以找到的"]],
+            ["exploration", ["探索"]]
+        ],
+        [ // 5/22~23
+            ["posture", ["姿勢"]],
+            ["subtle", ["細微的"]],
+            ["outright", ["公然", "完全"]],
+            ["misinterpret", ["誤解"]],
+            ["discomfort", ["不適", "不安"]],
+            ["displeasure", ["不悅"]],
+            ["conceal", ["隱藏"]],
+            ["proximity", ["接近", "親近"]],
+            ["slump", ["坐下"]],
+            ["interact", ["互動"]],
+            ["come to mid", ["浮現腦海"]],
+            ["baseline", ["基線"]]
+        ],
+        [ // 5/24~25
+            ["sensation", ["轟動的事件"]],
+            ["racket", ["球拍"]],
+            ["acquaint", ["使熟悉"]],
+            ["mentally", ["思想上", "心裡上"]],
+            ["astound", ["使震驚"]],
+            ["accomplishment", ["成就", "成績"]],
+            ["tense", ["緊張的"]],
+            ["stumble", ["絆倒"]],
+            ["spectator", ["觀眾"]],
+            ["defeat", ["擊敗"]],
+            ["meteoric", ["發展迅速的"]]
+        ],
+        [ // 5/27~28
+            ["contradiction", ["矛盾"]],
+            ["stagger", ["使震驚"]],
+            ["reliant", ["依賴的"]],
+            ["render", ["使成為", "使變得"]],
+            ["starvation", ["飢餓", "挨餓"]],
+            ["diversify", ["使多樣化"]],
+            ["eradicate", ["根除", "消滅"]],
+            ["coordinate", ["協調"]],
+            ["quest", ["尋求"]],
+            ["nutrient", ["營養"]],
+            ["blight", ["疾病"]],
+            ["cyclone", ["氣旋"]]
+        ],
+        [ // 6/1
             ["doughnut", ["甜甜圈"]],
             ["crispy", ["酥脆的"]],
             ["raw", ["生的"]],
@@ -189,7 +256,7 @@ words = [
             ["deep-fry", ["油炸"]],
             ["glaze", ["糖汁"]]
         ],
-        [
+        [ // 6/3~4
             ["categorize", ["將...分類"]],
             ["external", ["外部的"]],
             ["workforce", ["勞動人口"]],
@@ -202,7 +269,7 @@ words = [
             ["thrive", ["茁壯成長"]],
             ["mindest", ["心態", "思維方式"]]
         ],
-        [
+        [ // 6/5~6
             ["stunning", ["極漂亮的"]],
             ["wildlife", ["野生生物"]],
             ["classification", ["分類", "類別"]],
@@ -220,7 +287,7 @@ words = [
         ]
     ],
     [ // stupid book 
-        [
+        [ // Unit 22
             ["chimney", ["煙囪"]],
             ["chip", ["晶片", "薯片", "薄片", "弄缺", "打碎"]],
             ["discount", ["折扣", "忽視"]],
@@ -267,3 +334,4 @@ words = [
 ];
 
 quizHTML = "<br><br><br><button id = \"incorcnt\"><i class=\"fa-regular fa-face-smile\"></i></button><span id = \"content\"></span><button id = \"correctcnt\"><i class=\"fa-solid fa-check\"></i> 0/0</button><br><br><br><button id = \"A\" class = \"op\">a</button><br><button id = \"B\" class = \"op\">b</button><br><button id = \"C\" class = \"op\">c</button><br><button id = \"D\" class = \"op\">d</button><span id = \"WA\"></span>"
+mainHTML = "<button id = \"start\"><strong>開始測驗</strong></button><br><br><div id = \"options\"><button id = \"option0\" class = \"Button\">課本</button><br><button id = \"option1\" class = \"Button\">雜誌</button><br><button id = \"option2\" class = \"Button\">字彙王</button></div>"

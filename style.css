@@ -3,14 +3,8 @@
     to {background-position: top;}
 }
 
-
-
 body {
-    /* background-color: black; */
     text-align: center;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(hsla(221, 100%, 71%, 1) 0%, hsla(283, 99%, 48%, 1) 100%);
 }
 
 .Button {
@@ -29,9 +23,6 @@ body {
     background-color: rgb(50, 50, 50);
 }
 
-.visible {
-    opacity: 1;
-}
 .hidden {
     opacity: 0;
 }
@@ -153,7 +144,7 @@ body {
     rotate: 360deg;
 }
 
-/* #background {
+#background {
     background: url("image/background.png") repeat;
     width: 100vw;
     height: 100vh;
@@ -163,4 +154,4 @@ body {
     position: fixed;
     z-index: -1;
     animation: move 15s linear infinite;
-} */
+}
