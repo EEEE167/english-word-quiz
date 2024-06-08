@@ -52,6 +52,7 @@ function random(max) { // ( ^ω^)
         tmpR = Math.floor(Math.random() * (max + 1));
         if (!arr.includes(tmpR)) arr.push(tmpR);
     }
+    
     arr.push(Math.floor(Math.random() * (4)));
     for(let i = 0;i < 4;i++) {
         arr.push(Math.floor(Math.random() * curwords[arr[i]][1].length));
@@ -61,6 +62,7 @@ function random(max) { // ( ^ω^)
 
 function newWords() { // :D
     rand = random(curwords.length-1);
+
     doc.getElementById("content").innerHTML = "<strong>" + curwords[rand[rand[4]]][0] + "</strong>";
     for(let i = 0;i < 4;i++) {
         doc.getElementById(String.fromCharCode(65 + i)).innerHTML = "<strong>" + curwords[rand[i]][1][rand[5+i]] + "</strong>";
@@ -75,6 +77,7 @@ function answer(optionid, order) { // answer and check
         incorword = curwords[rand[rand[4]]][0] + "<br>✔: " + curwords[rand[rand[4]]][1][rand[5+rand[4]]] + "<br>✘: " + curwords[optionid][1][rand[5+order]];
         doc.getElementById("incorcnt").innerHTML = "<i class=\"fa-regular fa-face-frown\"></i>";
     }
+
     doc.getElementById("correctcnt").innerHTML = "<i class=\"fa-solid fa-check\"></i> " + correct.toString() + '/' + ans.toString();
 
     newWords();
