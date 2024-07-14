@@ -30,18 +30,9 @@
 
 ![D:](https://hackmd.io/_uploads/HyMAQK-BC.png)
 
-
-## 遇到的瓶頸
-
-
-手機板的網頁比例很奇怪，就算現在已經弄好了但比例還是有點小
-
-背景不知道放什麼
-
-
 ---
 
 
-雖然我知道有這個東西，但它沒有雜誌的單字 D:
+雖然我知道有這個東西，但它沒有雜誌的單字
 
 ![do not use it :( ](https://hackmd.io/_uploads/r1sPKigBR.png)
