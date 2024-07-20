@@ -1,6 +1,6 @@
 # 英文單字練習網站
 
-**網頁**: https://eeee167.github.io/english-word-quiz/index.html
+**網頁**：https://eeee167.github.io/english-word-quiz/index.html
 
 為了拯救我的英文學分而誕生的網頁
 
